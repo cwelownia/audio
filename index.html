@@ -7,34 +7,59 @@
     <style>
     button {
         font-size: 10vw;
-        background-color: #4CAF50;
         color: white;
         border: none;
+        background: linear-gradient(-45deg,#4caf7d,#4CAF50);
         border-radius: 40px;
         cursor: pointer;
-        width: 95vw;
-        min-height: 47.5vh;
+        
+        width: 100%;
+        height: 100%;
         line-height: 1;
+        max-width: 98vw;
     }
     body {
-        margin: 2.5vw;
-        align-content: center;
-        background-color: rgb(31, 53, 71);
+        background: linear-gradient(-45deg,#33414d,#1f3547);
+        margin: 0;
+    }
+    .box {
+    display: flex;
+    height: 60vh;
+    }
+    .left {
+    width: 50%;
+    height: 100%;
+    padding: 1vw;
+    left: 0;
+    }
+    .right {
+    width: 50%;
+    height: 100%;
+    padding: 1vw;
+    right: 0;
+    }
+    .bottom {
+    width: 100vw;
+    padding: 1vw;
     }
     </style>
 </head>
-<body>
+    <body><div class="box">
 
-<p><button onclick="p1()">🗣️🔥</button>
-<audio id="p1" src="kurwa.mp3"></audio></p>
+<div class="left"><button onclick="p1()">🗣️🔥</button>
+    <audio id="p1" src="kurwa.mp3"></audio></div>
 
-<p><button onclick="p2()">cheetos</button>
-<audio id="p2" src="cheetos.mp3" autoplay></audio></p>
+<div class="right"><button onclick="p2()">cheetos</button>
+    <audio id="p2" src="cheetos.mp3" autoplay></audio></div>
+
+    </div><div class="bottom">
 
 <p><button onclick="p3()">:(</button>
-<audio id="p3" src="n.mp3"></audio></p>
+    <audio id="p3" src="n.mp3"></audio></p>
 
-<script>
+<button onclick="pa()">wszystko</button>
+
+</div><script>
   function p1(){
   document.getElementById("p1").play();}
 
@@ -43,6 +68,12 @@
 
   function p3(){
   document.getElementById("p3").play();}
+
+  function pa(){
+    document.getElementById("p1").play();
+    document.getElementById("p2").play();
+    document.getElementById("p3").play();
+    }
 </script>
 
 
