@@ -20,8 +20,9 @@
         min-height: 150px;
     }
     body {
-        background: linear-gradient(-45deg,#33414d,#1f3547),#1f3547;
+        background: linear-gradient(-45deg,#33414d,#1f3547),#33414d;
         margin: 0;
+        overflow-x: hidden;
     }
     .box {
     display: flex;
@@ -54,14 +55,14 @@
 <div class="right"><button onclick="p2()">cheetos</button>
     <audio id="p2" src="cheetos.mp3" autoplay></audio></div>
 
-    </div><div class="bottom">
+    </div>
 
-<p><button onclick="p3()">:(</button>
-    <audio id="p3" src="n.mp3"></audio></p>
+<div class="bottom" style="margin-top: 2vw;"><button onclick="p3()">:(</button>
+    <audio id="p3" src="n.mp3"></audio></div>
 
-<button onclick="pa()">wszystko</button>
+<div class="bottom"><button onclick="pa()">wszystko</button></div>
 
-</div><script>
+<script>
   function p1(){
   document.getElementById("p1").play();}
 
@@ -76,5 +77,4 @@
     document.getElementById("p2").play();
     document.getElementById("p3").play();
     }
-</script></body>
-</html>
+</script></body></html>
